@@ -1,0 +1,29 @@
+{
+	"Name": "SteelSeries Battery",
+	"Description": "Displays battery levels for supported SteelSeries wireless mice and Arctis GameBuds.",
+	"com.cookienomster.steelseriesbatteryplugin.battery": {
+		"Name": "Mouse Battery",
+		"Tooltip": "Shows the battery level and charging state of a supported SteelSeries wireless mouse."
+	},
+	"com.cookienomster.steelseriesbatteryplugin.gamebuds": {
+		"Name": "Arctis GameBuds Battery",
+		"Tooltip": "Shows the left and right Arctis GameBuds battery levels."
+	},
+	"com.cookienomster.steelseriesbatteryplugin.dial": {
+		"Name": "Battery Dial",
+		"Tooltip": "Rotate the dial to switch between all supported mice and headsets.",
+		"Encoder": {
+			"TriggerDescription": { "Rotate": "Switch device", "Push": "Refresh", "Touch": "Next device" }
+		}
+	},
+	"Localization": {
+		"DEFAULT_MOUSE_LABEL": "Mouse",
+		"STATUS_CHARGING": "CHARGING",
+		"STATUS_BATTERY": "BATTERY",
+		"STATUS_OFF": "SWITCHED OFF",
+		"STATUS_NOT_CONNECTED": "NOT CONNECTED",
+		"STATUS_READ_ERROR": "READ ERROR",
+		"STATUS_IN_CASE": "IN CASE",
+		"STATUS_DISCONNECTED": "DISCONNECTED"
+	}
+}

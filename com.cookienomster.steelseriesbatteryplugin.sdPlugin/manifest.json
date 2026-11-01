@@ -1,0 +1,86 @@
+{
+	"Name": "SteelSeries Battery",
+	"Version": "0.16.0.0",
+	"Author": "CookieNomster",
+	"Actions": [
+		{
+			"Name": "Mouse Battery",
+			"UUID": "com.cookienomster.steelseriesbatteryplugin.battery",
+			"Icon": "imgs/actions/battery/icon",
+			"Tooltip": "Shows the battery level and charging state of a supported SteelSeries wireless mouse.",
+			"PropertyInspectorPath": "ui/mouse-battery.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/battery/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Arctis GameBuds Battery",
+			"UUID": "com.cookienomster.steelseriesbatteryplugin.gamebuds",
+			"Icon": "imgs/actions/gamebuds/icon",
+			"Tooltip": "Shows the left and right Arctis GameBuds battery levels.",
+			"PropertyInspectorPath": "ui/gamebuds-battery.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/gamebuds/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Battery Dial",
+			"UUID": "com.cookienomster.steelseriesbatteryplugin.dial",
+			"Icon": "imgs/actions/battery/icon",
+			"Tooltip": "Rotate the dial to switch between all supported mice and headsets.",
+			"PropertyInspectorPath": "ui/dial-battery.html",
+			"Controllers": [
+				"Encoder"
+			],
+			"Encoder": {
+				"layout": "layouts/battery-dial.json",
+				"Icon": "imgs/actions/battery/icon",
+				"TriggerDescription": {
+					"Rotate": "Switch device",
+					"Push": "Refresh",
+					"Touch": "Next device"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/battery/key"
+				}
+			]
+		}
+	],
+	"Category": "SteelSeries Battery",
+	"CategoryIcon": "imgs/plugin/category-icon-battery",
+	"CodePath": "bin/plugin.js",
+	"Description": "Displays battery levels for supported SteelSeries wireless mice and Arctis GameBuds.",
+	"Icon": "imgs/plugin/marketplace-battery",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "7.1"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "24"
+	},
+	"UUID": "com.cookienomster.steelseriesbatteryplugin"
+}

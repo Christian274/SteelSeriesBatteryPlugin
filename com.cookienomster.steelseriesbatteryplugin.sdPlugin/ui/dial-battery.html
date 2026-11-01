@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head lang="en">
+		<title>Battery Dial Settings</title>
+		<meta charset="utf-8" />
+		<script src="sdpi-components.js"></script>
+		<script>
+			SDPIComponents.i18n.locales = {
+				en: { devices: "Devices (none = all)", label: "Label", green: "Green from (%)", yellow: "Yellow from (%)" },
+				de: { devices: "Geräte (keins = alle)", label: "Label", green: "Grün ab (%)", yellow: "Gelb ab (%)" },
+			};
+		</script>
+		<style>
+			.threshold-value {
+				display: block;
+				margin-top: 4px;
+				text-align: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<sdpi-item label="__MSG_devices__">
+			<sdpi-checkbox-list setting="devices" columns="1">
+				<option value="aerox-5-wireless">Aerox 5 Wireless</option>
+				<option value="arctis-gamebuds">Arctis GameBuds</option>
+			</sdpi-checkbox-list>
+		</sdpi-item>
+		<sdpi-item label="__MSG_green__">
+			<sdpi-range setting="greenThreshold" min="0" max="100" step="1" default="75" showlabels></sdpi-range>
+			<output class="threshold-value" id="greenThresholdValue">75%</output>
+		</sdpi-item>
+		<sdpi-item label="__MSG_yellow__">
+			<sdpi-range setting="yellowThreshold" min="0" max="100" step="1" default="35" showlabels></sdpi-range>
+			<output class="threshold-value" id="yellowThresholdValue">35%</output>
+		</sdpi-item>
+		<script>
+			function bindThresholdReadout(setting, outputId, fallback) {
+				const range = document.querySelector(`sdpi-range[setting="${setting}"]`);
+				const output = document.getElementById(outputId);
+				const update = () => {
+					const value = Number(range.value ?? range.getAttribute("default") ?? fallback);
+					output.value = `${value}%`;
+					output.textContent = `${value}%`;
+				};
+
+				range.addEventListener("valuechange", update);
+				update();
+			}
+
+			customElements.whenDefined("sdpi-range").then(() => {
+				bindThresholdReadout("greenThreshold", "greenThresholdValue", 75);
+				bindThresholdReadout("yellowThreshold", "yellowThresholdValue", 35);
+			});
+		</script>
+	</body>
+</html>

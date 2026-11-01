@@ -1,0 +1,29 @@
+{
+	"Name": "SteelSeries Akku",
+	"Description": "Zeigt den Akkustand unterstützter kabelloser SteelSeries-Mäuse und der Arctis GameBuds an.",
+	"com.cookienomster.steelseriesbatteryplugin.battery": {
+		"Name": "Maus-Akku",
+		"Tooltip": "Zeigt Akkustand und Ladestatus einer unterstützten kabellosen SteelSeries-Maus an."
+	},
+	"com.cookienomster.steelseriesbatteryplugin.gamebuds": {
+		"Name": "Arctis GameBuds Akku",
+		"Tooltip": "Zeigt den Akkustand der linken und rechten Arctis GameBuds an."
+	},
+	"com.cookienomster.steelseriesbatteryplugin.dial": {
+		"Name": "Akku-Drehregler",
+		"Tooltip": "Drehe den Regler, um zwischen allen unterstützten Mäusen und Headsets zu wechseln.",
+		"Encoder": {
+			"TriggerDescription": { "Rotate": "Gerät wechseln", "Push": "Aktualisieren", "Touch": "Nächstes Gerät" }
+		}
+	},
+	"Localization": {
+		"DEFAULT_MOUSE_LABEL": "Maus",
+		"STATUS_CHARGING": "LÄDT",
+		"STATUS_BATTERY": "AKKU",
+		"STATUS_OFF": "AUSGESCHALTET",
+		"STATUS_NOT_CONNECTED": "NICHT VERBUNDEN",
+		"STATUS_READ_ERROR": "LESEFEHLER",
+		"STATUS_IN_CASE": "IM CASE",
+		"STATUS_DISCONNECTED": "GETRENNT"
+	}
+}
